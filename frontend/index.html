@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YouTube Downloader</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .progress-wrapper {
+      display: none;
+      margin: 20px auto;
+      width: 60px;
+      height: 60px;
+      position: relative;
+    }
+
+    .progress-ring {
+      transform: rotate(-90deg);
+    }
+
+    .progress-ring__circle {
+      transition: stroke-dashoffset 0.35s;
+      transform: rotate(0deg);
+      transform-origin: 50% 50%;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="glass-card">
+      <h1>YouTube Downloader</h1>
+
+      <input type="text" id="urlInput" placeholder="Paste YouTube URL" oninput="previewVideo()" />
+
+      <div id="preview" class="preview-container"></div>
+
+      <select id="qualitySelect">
+        <option value="1080">1080p</option>
+        <option value="720" selected>720p</option>
+        <option value="480">480p</option>
+        <option value="360">360p</option>
+      </select>
+
+      <button onclick="downloadVideo()">Download</button>
+
+      <div class="progress-wrapper" id="progressWrapper">
+        <svg class="progress-ring" width="60" height="60">
+          <circle
+            class="progress-ring__circle"
+            stroke="#00BFFF"
+            stroke-width="6"
+            fill="transparent"
+            r="25"
+            cx="30"
+            cy="30"
+          />
+        </svg>
+      </div>
+
+      <p id="status"></p>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

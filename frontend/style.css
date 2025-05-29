@@ -1,0 +1,126 @@
+/* 🌐 Global Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* 💠 Glassmorphic Card */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* ✍️ Heading */
+  h1 {
+    font-size: 28px;
+    margin-bottom: 24px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  
+  /* 🧾 Inputs, Selects & Buttons */
+  input,
+  select,
+  button {
+    padding: 12px 14px;
+    margin: 12px 0;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-weight: 500;
+  }
+  
+  /* 🟡 Inputs & Select */
+  input,
+  select {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  /* 🔵 Button */
+  button {
+    background-color: #007aff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #005bb5;
+    transform: scale(1.03);
+  }
+  
+  /* 🖼 Preview Container */
+  .preview-container {
+    margin: 20px 0;
+  }
+  
+  .preview-container h2 {
+    font-size: 18px;
+    color: white;
+    margin-top: 10px;
+  }
+  
+  .preview-container img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* ⚠️ Status Message */
+  #status {
+    margin-top: 20px;
+    font-weight: 500;
+    color: #ffcc00;
+  }
+  
+  /* 🔄 Circular Progress Bar */
+  .progress-wrapper {
+    margin: 20px auto;
+    width: 60px;
+    height: 60px;
+    display: none;
+    position: relative;
+  }
+  
+  .progress-ring {
+    transform: rotate(-90deg);
+  }
+  
+  .progress-ring__circle {
+    stroke: #00bfff;
+    stroke-linecap: round;
+    stroke-width: 6;
+    fill: transparent;
+    transition: stroke-dashoffset 0.35s;
+    transform-origin: 50% 50%;
+  }
+  
+  /* 📦 Hidden Utility */
+  .hidden {
+    display: none !important;
+  }
+  
